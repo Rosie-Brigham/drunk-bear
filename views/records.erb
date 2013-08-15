@@ -1,0 +1,18 @@
+<h1>Visitors to the machine</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Names</th>
+            <th> Where they are from</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @visitor.each do |f| %>
+        <tr>
+            <td><%= f.name %></td>
+            <td><%= f.place %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

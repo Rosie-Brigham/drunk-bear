@@ -1,0 +1,139 @@
+<h1>Thank you <%= @name %>! 
+    <br>
+    After much tantalising tinkering, the machine has triggered a most tempting result
+
+</h1>
+<body>
+<h2>Your Suggestion:</h2>
+    <br>
+
+<%= museum %>
+<br>
+<br>
+Particularly the machine recommends you to
+
+<%= finalText %>
+
+
+
+    
+
+<!--
+<!-- here comes the suggestion box, (museum) -
+<% if @mood == 'stressed' %>
+    If you are stressed, one of the more relaxed days out can be found just north of Oxford street in the Wallace collection. It's a medium sized historic house with the most sumptuous decoration and a slow atmosphere. Ask about the intricate history of the Serve porceline and the delicate furniture, some of which belonged to Mary Antoinette.
+
+<% elsif @mood =='contemplative' %>
+    A wonder around the National Gallery is always rewarding. As National Art collections go this one is not too big, and so it is easy to walk around the majority of it without getting 'art sick'. However, may be small compared to places like the met but it sure is packed with mazing masterpeices.
+
+<% elsif @mood =='inspired' %>
+    Take a sketch book to the V+A and try sketching some of your favourite peices. Dont spend more than 10 minites on each one, constantly move around the objects seeing them from different angles. Use only a limited amount of colours to push your skills
+
+<% else @mood =='bored' %>
+    A trip to Brick Lane will always shake the dust from the creative cobwwebs! Wander around he shops and markets studying the graffitti, which constantly changes. Admire the street signs whilst munching of a delicious curry before redesigning your wardrobe in the fantastic vintage shops!
+
+<% end %>
+
+<!-- HERE COMES THE INDIVIDUAL COMMENTS! --
+
+<br>
+<br>
+Particularly the machine recomends you to 
+
+<!-- so put everything on the app page, then reference it on here like so... --
+ <%= @a1 %>
+
+<!-- Wallace Collection --
+
+<% if @mood == 'stressed' && @recomendation == 'colour' %> 
+absorb the amazing colours of the French Rococo era, from the dazzling wallpaper to the sumptous still lifes in the main gallery
+
+<% elsif @mood == 'stressed' && @recomendation == 'concepts' %>
+Study the still lifes in th long gallery, through this link (here) try and work out exactly why each object may have been chosen for the painting. Deconstruct the image to discover more about the patron.
+
+<% elsif @mood == 'stressed' && @recomendation == 'icons' %>
+find the Fragonard's 'The Swing' on the first floor; try and work out exactly who this painting was created for  why, what is the purpose of the dog and the man in he bushes?
+
+<% else @mood == 'stressed' && @recomendation == 'unknown' %>
+check out the amazing collection of armour in the lower gallerys, try and imagine wearing one of those suits day in dayout walking hundreds of miles to battle
+
+<% end %>
+<!-- National Gallery --
+
+<% if @mood =='contemplative' && @recomendation =='colour' %>
+<!-- instead onf 'and' in ruby put && becuase its not the same. --
+the impressionist work, on the first floor to the right as you walk in the main entrance, or Turner's 'Rain, Steam and Speed' in room 39.
+
+<% elsif @mood =='contemplative' && @recomendation == 'concepts' %>
+study the pre-renaissance style of painting in the Sainsbury wing, ask the attendents about the visual consequences of the workshop practice. In particular look at the Wilton Dyptych
+
+<% else @mood == 'contemplative' && @recomendation =='icons' %>
+with out a doubt pay a visit to Leonardo da Vinci's 'Madonna on the Rocks', arguably on of the finest works in the collection
+
+<% end %>
+
+<!-- V+A --
+
+<% if @mood == 'stressed' && @recomendation == 'colour' %> 
+admire the fantastic glass scultpture by Chihuly in the entrance hall. His Rotunda Chandelier was made for the gallery in 2001 and constructed entirely of blown glass. Each peice is secured individually to the center, it is 27 ft tall and weight in at 3800lb.
+
+<br>
+
+The glass collections are wonderful, from modern peices to medieval stained glass the colours radiating in the galleries are enough to send the veiwer into raptures. Try and find the fabled Luck of Edenhall in the glass gallery, a beautiful cup brimming with tales and myths. 
+
+<% elsif @mood =='stressed' && @recomendation == 'concepts' %>
+Go to the Islamic Middle East galleries on the ground floor to look at the amazing art from the Middle East and North Africa. Ranging from the 7th to the 20th century some of the patterns are equisit in detail and colour. Compare the development of visual culture of the East with that of the more famous Itaian Renaissance in the West.
+
+<% elsif @mood == 'stressed' && @recomendation =='icons' %>
+check out the fashion displays. As a museum of Art and Design the fashion collection spans 100 years, you can see everything from the bustles of Victorian London to the costumes of modern rock legends such as David Bowie. Visit room 40 to see the Fashion Gallery, spaning 1750 to the present
+
+<% else @mood == 'stressed' && @recomendation =='unknown' %>
+The Jewellery Gallery (rooms 91-93) on he first floor a hidden gem, literally. Even if your not often excited by large pretty stones this collection will have you dancing on your heels. Imagine wearing the Tiara in case 17, room 91!
+<% end %>
+
+<!-- Brick Lane --
+
+<% if @mood == 'bored' && @recomendation == 'colour' %> 
+wander around and admire the colours and smells of the world convieniently in one street. Brick Lane has some of the best street food in the UK with unbeatable curries.
+
+
+<% elsif @mood =='bored' && @recomendation == 'concepts' %>
+Theres always interesting art displays on in the small gallerieis and shops, but they move around. Go for an explore and record what you see.
+
+<% elsif @mood == 'bored' && @recomendation =='icons' %>
+Check out the graffiti, it changes weekly and always has something beutiful to offer
+
+<% else @mood == 'bored' && @recomendation =='unknown' %>
+try finding the baegle shop for a really good, cheap bagel. Throw in a portugese custard tart for 75p to, one of the most reasnable prices in London!
+<% end %>
+
+
+
+//__>
+
+
+<!-- email -->
+<!-- hidden variable form here, html, not displayed
+form input value= email
+(hidden value) names= @name
+ -->
+
+
+
+<!-- thanks go here -->
+<br>
+<br>
+
+Would you like your reccomendation emailed to you?
+<br> 
+If so, please enter your email into the box
+<br>
+
+<label> HERE </label>
+<br>
+            <br>
+            <form method='post' action='/result'>
+            <input type='text' name='vemail'>
+<span>
+The Mini-meandering-maching hopes to have helped you on your day, and that you enjoy your visit to London, so very different from <%= @place %>
+</span>

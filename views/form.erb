@@ -1,0 +1,75 @@
+   <h1>Welcome to the <strong>Mini-Museum-Meandering-Machine!</strong>
+   </h1>
+   <br>
+   <br>
+<body>
+     <form method="post" action='/'>  
+     <label>Please type in your name to start:</label>
+        <br>
+            <input type='text' name='visitor_name'>
+            <br>
+            <br>
+            <br>
+
+            <label> Where have you travelled from to visit London today? </label>
+            <br>
+            <form method='post' action='/'>
+            <input type='text' name='place'>
+            <br>
+            <br>
+
+            <p>
+            Right, all you need to do now is answer these simple questions
+            </p>
+            <br>
+
+      <label>What type of mood are you in today?</label>
+            <label class="radio">
+                <input type="radio" name="mood" value="stressed">
+                Stressed?
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="mood" value="contemplative">
+                Contemplative?
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="mood" value="inspired">
+                Inspired?
+            </label>
+            <label class="radio">
+                <input type="radio" name="mood" value="bored">
+                Bored?
+            </label>
+            
+            <br>
+            <br>
+
+            <label>What is your favourite out of the following:</label>
+            <label class="radio">
+                <input type="radio" name="fav" value="colour">
+                Vivid colour
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="fav" value="concepts">
+                Challenging concepts
+            </label>
+            
+            <label class="radio">
+                <input type="radio" name="fav" value="icons">
+                Famous icons
+            </label>
+            <label class="radio">
+                <input type="radio" name="fav" value="unknown">
+                Something unknown
+            </label>
+
+            <br>
+
+            <button type='submit' class='btn btn-success'>Submit</button>
+          </p>
+          </form>
+</body>
+   
