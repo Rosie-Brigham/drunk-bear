@@ -90,7 +90,7 @@ elsif @mood == 'contemplative' && @recomendation =='icons'
 
 
 # v+a
-elsif @mood == 'stressed' && @recomendation == 'colour'
+elsif @mood == 'inspired' && @recomendation == 'colour'
     @finalText = "admire the fantastic glass scultpture by Chihuly in the entrance hall.
      His Rotunda Chandelier was made for the gallery in 2001 and constructed entirely of blown glass. 
      Each peice is secured individually to the center, it is 27 ft tall and weight in at 3800lb.
@@ -100,14 +100,14 @@ elsif @mood == 'stressed' && @recomendation == 'colour'
      The glass collections are wonderful, from modern peices to medieval stained glass the colours radiating in the galleries
      are enough to send the veiwer into raptures. Try and find the fabled Luck of Edenhall in the glass gallery, a beautiful
      cup brimming with tales and myths. "
-elsif @mood =='stressed' && @recomendation == 'concepts'
+elsif @mood =='inspired' && @recomendation == 'concepts'
     @finalText = "Go to the Islamic Middle East galleries on the ground floor to look at the amazing art from the Middle East and North Africa. 
     Ranging from the 7th to the 20th century some of the patterns are equisit in detail and colour. 
     Compare the development of visual culture of the East with that of the more famous Itaian Renaissance in the West."
-elsif @mood == 'stressed' && @recomendation =='icons'
+elsif @mood == 'inspired' && @recomendation =='icons'
     @finalText = "check out the fashion displays. As a museum of Art and Design the fashion collection spans 100 years, you can see everything from the bustles 
     of Victorian London to the costumes of modern rock legends such as David Bowie. Visit room 40 to see the Fashion Gallery, spaning 1750 to the present"
-elsif @mood == 'stressed' && @recomendation =='unknown'
+elsif @mood == 'inspired' && @recomendation =='unknown'
     @finalText = "The Jewellery Gallery (rooms 91-93) on he first floor a hidden gem, literally. Even if your not often excited by 
     large pretty stones this collection will have you dancing on your heels. Imagine wearing the Tiara in case 17, room 91!"
 
@@ -123,7 +123,7 @@ elsif @mood =='bored' && @recomendation == 'concepts'
 elsif @mood == 'bored' && @recomendation =='icons'
     @finalText = "Check out the graffiti, it changes weekly and always has something beutiful to offer"
 else @mood == 'bored' && @recomendation =='unknown'
-    @finalText = "try finding the baegle shop for a really good, cheap bagel. 
+    @finalText = "try finding the biegle shop for a really good, cheap bagel. 
     Throw in a portugese custard tart for 75p to, one of the most reasnable prices in London!"
 end
 end
@@ -150,8 +150,9 @@ post '/result' do
 
     vemail = params[:email]
     d = Visitor.new(:email => vemail)
-    
-    Pony.mail(:to => vemail, :subject => "The amazing mini-meandering machine", :body => erb(:email, :layout => false))
+
+     Pony.mail(:to => vemail, 
+        :subject => "The amazing mini-meandering machine", :body => erb(:email, :layout => false))
     erb:thanks
 end
 

@@ -1,2 +1,35 @@
-h1 {font-family: garamond; color:blue; background: black;}
-/*body {background-image:url('/images/ceiling.jpg'); background-repeat:no-repeat;}*/
+h1
+    {font-family: garamond; color:darkgrey; background: beige;
+    font-size: 55px; text-align: center;}
+
+body 
+    {background-color: AliceBlue;
+    background-image:url('/images/portico.jpg'); 
+    background-repeat:no-repeat; 
+    background-size: 100% auto }
+
+div.transbox    
+    { width: 1000px;
+    height:600px;
+    margin:30px 50px;
+    background-color:AliceBlue;
+    border:1.5px solid black;
+    opacity:0.8;}
+
+div.transbox form
+    {margin:30px 50px;
+    font-weight: bold;
+    color: black, }
+
+.btn-success:hover
+    {background-color: #660099;
+        border-color: black}
+
+.btn:hover
+    {background-color: #660099;
+        border-color: black}
+
+.btn {font-family: garamond; font-size: 20px;
+    background-color: #990066;
+        border-color: white;
+        text-align: right;}
